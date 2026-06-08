@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KSPH Photovoltaik – Energieunabhängigkeit beginnt auf Ihrem Dach. Premium Solaranlagen für Eigenheimbesitzer. Jetzt unverbindlich beraten lassen.">
+    <title>KSPH | Premium Photovoltaik & Energieunabhängigkeit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <style>
+        :root {
+            --primary: #0A192F;       /* Deep Midnight Blue */
+            --primary-light: #172A45; /* Lighter Midnight Blue */
+            --accent: #D4AF37;        /* Premium Gold Accent */
+            --accent-hover: #F3E5AB;  /* Soft Light Gold */
+            --text-dark: #1E293B;     /* Charcoal for readability */
+            --text-light: #F8FAFC;    /* Off-white */
+            --bg-light: #F8FAFC;      /* Clean background */
+            --font-sans: 'Inter', sans-serif;
+            --font-serif: 'Playfair Display', serif;
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--text-dark);
+            background-color: #FFFFFF;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Utility Classes */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        .text-center { text-align: center; }
+        
+        .gold-text { color: var(--accent); }
+
+        /* Premium Section Title */
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #64748B;
+            max-width: 600px;
+            margin: 0 auto 4rem auto;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 500;
+        }
+
+        /* Buttons */
+        .btn-premium {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent) 0%, #AA7C11 100%);
+            color: var(--primary);
+            text-decoration: none;
+            padding: 18px 36px;
+            font-weight: 600;
+            border-radius: 4px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .btn-premium:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+            background: linear-gradient(135deg, #E5C158 0%, var(--accent) 100%);
+        }
+
+        /* Header / Navbar */
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 25px 0;
+            background: linear-gradient(to bottom, rgba(10,25,47,0.8) 0%, rgba(10,25,47,0) 100%);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-sans);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            letter-spacing: 3px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .header-contact {
+            display: flex;
+            gap: 25px;
+        }
+
+        .header-contact a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .header-contact a i {
+            color: var(--accent);
+        }
+
+        .header-contact a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            background: linear-gradient(rgba(10, 25, 47, 0.55), rgba(10, 25, 47, 0.85)), 
+                        url('https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            color: #FFFFFF;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-serif);
+            font-size: 4rem;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            color: #E2E8F0;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        /* Benefits Section */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .benefit-card {
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            padding: 50px 40px;
+            border-radius: 4px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--accent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(10, 25, 47, 0.05);
+            border-color: transparent;
+        }
+
+        .benefit-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .benefit-card p {
+            color: #64748B;
+            font-size: 1rem;
+        }
+
+        /* Why Choose Us Section */
+        .why-us {
+            background-color: var(--primary);
+            color: #FFFFFF;
+            position: relative;
+        }
+
+        .why-us .section-title {
+            color: #FFFFFF;
+        }
+
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+
+        .why-us-item {
+            text-align: center;
+            padding: 30px 15px;
+            background: var(--primary-light);
+            border-radius: 4px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: var(--transition);
+        }
+
+        .why-us-item:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .why-us-item i {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 1.2rem;
+        }
+
+        .why-us-item h4 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        /* Process Section */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            position: relative;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .step-number {
+            width: 70px;
+            height: 70px;
+            background: var(--bg-light);
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem auto;
+            transition: var(--transition);
+        }
+
+        .process-step:hover .step-number {
+            background: var(--primary);
+            color: var(--accent);
+            border-color: var(--primary);
+        }
+
+        .process-step h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .process-step p {
+            color: #64748B;
+            font-size: 0.95rem;
+        }
+
+        /* Trust & Testimonials Section */
+        .trust-section {
+            background-color: var(--bg-light);
+        }
+
+        .badges-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+
+        .badge-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 1.1rem;
+            background: #FFFFFF;
+            padding: 15px 30px;
+            border-radius: 4px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+        }
+
+        .badge-item i {
+            color: var(--accent);
+            font-size: 1.4rem;
+        }
+
+        .testimonial-card {
+            background: #FFFFFF;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border-left: 5px solid var(--accent);
+            position: relative;
+        }
+
+        .testimonial-text {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Lead Form Section */
+        .form-section {
+            background: linear-gradient(rgba(10, 25, 47, 0.92), rgba(10, 25, 47, 0.92)), 
+                        url('https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            color: #FFFFFF;
+        }
+
+        .form-section .section-title {
+            color: #FFFFFF;
+        }
+
+        .form-container {
+            max-width: 650px;
+            margin: 0 auto;
+            background: rgba(23, 42, 69, 0.8);
+            padding: 50px;
+            border-radius: 4px;
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #94A3B8;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 14px 18px;
+            background: rgba(10, 25, 47, 0.6);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 4px;
+            color: #FFFFFF;
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--accent);
+            background: rgba(10, 25, 47, 0.9);
+        }
+
+        .form-container .btn-premium {
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #050C16;
+            color: #94A3B8;
+            padding: 60px 0 30px 0;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-info {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-info a {
+            color: #94A3B8;
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-info a:hover {
+            color: var(--accent);
+        }
+
+        .footer-info i {
+            color: var(--accent);
+        }
+
+        .copyright {
+            text-align: center;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 30px;
+        }
+
+        /* --- Responsive Web Design (Mobile First Media Queries) --- */
+        
+        @media (max-width: 1024px) {
+            .why-us-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            .hero p {
+                font-size: 1.15rem;
+            }
+            .header-contact {
+                display: none;
+            }
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            .why-us-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+            .form-container {
+                padding: 30px 20px;
+            }
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-info {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .why-us-grid {
+                grid-template-columns: 1fr;
+            }
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+            .badge-item {
+                width: 100%;
+                justify-content: center;
+            }
+            .testimonial-card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">KS<span>PH</span></div>
+            <div class="header-contact">
+                <a href="tel:+4915150512722"><i class="fa-solid fa-phone"></i> +49 15150512722</a>
+                <a href="mailto:klaus.schaaf@pebge.eu"><i class="fa-solid fa-envelope"></i> klaus.schaaf@pebge.eu</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content animate__animated animate__fadeInLeft">
+                <h1>Energieunabhängigkeit beginnt auf Ihrem Dach</h1>
+                <p>Photovoltaik für eine unabhängige Zukunft.</p>
+                <a href="#beratung" class="btn-premium">Jetzt unverbindlich beraten lassen</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Ihre Vorteile auf einen Blick</h2>
+                <p class="section-subtitle">Nachhaltige Werte für Generationen</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card text-center">
+                    <div class="benefit-icon"><i class="fa-solid fa-sun"></i></div>
+                    <h3>☀ Eigener Strom</h3>
+                    <p>Produzieren Sie Ihre eigene saubere Energie direkt auf Ihrem Dach und senken Sie sofort Ihre Stromkosten.</p>
+                </div>
+                <div class="benefit-card text-center">
+                    <div class="benefit-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>📈 Langfristige Ersparnis</h3>
+                    <p>Sichern Sie sich jahrzehntelang gegen steigende Strompreise ab und steigern Sie den Wert Ihrer Immobilie.</p>
+                </div>
+                <div class="benefit-card text-center">
+                    <div class="benefit-icon"><i class="fa-solid fa-house"></i></div>
+                    <h3>🏡 Mehr Unabhängigkeit</h3>
+                    <p>Machen Sie sich unabhängig von großen Energieversorgern und externen Marktschwankungen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding why-us">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Warum KSPH?</h2>
+                <p class="section-subtitle" style="color: #94A3B8;">Premium-Qualität im Fokus</p>
+            </div>
+            <div class="why-us-grid">
+                <div class="why-us-item">
+                    <i class="fa-solid fa-user-tie"></i>
+                    <h4>Persönliche Beratung</h4>
+                </div>
+                <div class="why-us-item">
+                    <i class="fa-solid fa-compass-drafting"></i>
+                    <h4>Individuelle Planung</h4>
+                </div>
+                <div class="why-us-item">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <h4>Hochwertige Komponenten</h4>
+                </div>
+                <div class="why-us-item">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <h4>Fachgerechte Installation</h4>
+                </div>
+                <div class="why-us-item">
+                    <i class="fa-solid fa-handshake-angle"></i>
+                    <h4>Langfristiger Service</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Ihr Weg zur Solaranlage</h2>
+                <p class="section-subtitle">In vier einfachen Schritten ans Netz</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h3>Beratung</h3>
+                    <p>Unverbindliches Erstgespräch direkt bei Ihnen vor Ort.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h3>Planung</h3>
+                    <p>Maßgeschneiderte technische Auslegung für maximale Effizienz.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h3>Installation</h3>
+                    <p>Schnelle und präzise Montage durch unser Expertenteam.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <h3>Inbetriebnahme</h3>
+                    <p>Schlüsselfertige Übergabe inklusive aller Anmeldungen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding trust-section">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Vertrauen & Qualität</h2>
+                <p class="section-subtitle">Ausgezeichneter Service für Ihr Zuhause</p>
+            </div>
+            
+            <div class="badges-container">
+                <div class="badge-item">
+                    <i class="fa-solid fa-shield-halved"></i> Garantie inkludiert
+                </div>
+                <div class="badge-item">
+                    <i class="fa-solid fa-award"></i> TÜV-Zertifiziert
+                </div>
+                <div class="badge-item">
+                    <i class="fa-solid fa-map-pin"></i> Regionaler Partner
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-text">
+                    "Die Entscheidung für KSPH war absolut goldrichtig. Von der ersten präzisen Planung bis zur sauberen Montage lief alles auf höchstem Niveau. Endlich produzieren wir unseren eigenen Strom!"
+                </div>
+                <div class="testimonial-author">
+                    — Familie M., Baden-Württemberg
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding form-section" id="beratung">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Kostenlose Beratung anfordern</h2>
+                <p class="section-subtitle" style="color: #94A3B8;">Sichern Sie sich Ihr unverbindliches Angebot</p>
+            </div>
+            <div class="form-container">
+                <form action="https://formspree.io/f/xkoaroqw" method="POST">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="vorname">Vorname</label>
+                            <input type="text" id="vorname" name="Vorname" required placeholder="z.B. Thomas">
+                        </div>
+                        <div class="form-group">
+                            <label for="nachname">Nachname</label>
+                            <input type="text" id="nachname" name="Nachname" required placeholder="z.B. Müller">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefon">Telefon</label>
+                            <input type="tel" id="telefon" name="Telefon" required placeholder="z.B. +49 170 1234567">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-Mail</label>
+                            <input type="email" id="email" name="_replyto" required placeholder="z.B. thomas.mueller@gmail.de">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="plz">Postleitzahl</label>
+                            <input type="text" id="plz" name="Postleitzahl" required placeholder="z.B. 70173">
+                        </div>
+                    </div>
+                    <input type="hidden" name="_subject" value="Neuer Premium-Lead von KSPH Landingpage">
+                    <button type="submit" class="btn-premium">Jetzt Anfrage senden</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">KS<span>PH</span></div>
+                <div class="footer-info">
+                    <a href="tel:+4915150512722"><i class="fa-solid fa-phone"></i> +49 15150512722</a>
+                    <a href="mailto:klaus.schaaf@pebge.eu"><i class="fa-solid fa-envelope"></i> klaus.schaaf@pebge.eu</a>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 KSPH Photovoltaik. Alle Rechte vorbehalten. | Design & Engineering auf Premium-Niveau.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
